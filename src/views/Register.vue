@@ -8,11 +8,15 @@
 
 <script setup>
 import {ref} from "vue";
-import {getAuth, createUserWithEmailAndPassword} from  "firebase/auth";
-import {useRouter} from  'vue-router' //import router
+import {getAuth, 
+        createUserWithEmailAndPassword,
+        GoogleAuthProvider,
+        signInWithPopup,
+} from  "firebase/auth";
+import {useRouter} from  'vue-router'; //import router
 const email = ref("");
 const password = ref("");
-const router = useRouter() //get a reference to our vue router
+const router = useRouter(); //get a reference to our vue router
 
 const register = () => {
     // need .value because ref()
@@ -29,7 +33,18 @@ const register = () => {
 };
 
 const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(getAuth(), provider)
+        .then((result) => {
+            console.log(result.user);
+            router.push("/feed");
+        })
+        .catch((error) => {
+            // handle error
+            console.log(error.code);
+            alert(error.message);
+        })
 
-}
+};
 
 </script>
