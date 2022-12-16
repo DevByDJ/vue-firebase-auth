@@ -3,8 +3,8 @@
     <router-link to="/" > Home </router-link> |
     <router-link to="/feed" > Feed </router-link> |
     <router-link data-test="register btn" to="/register" > Register </router-link> |
-    <router-link to="/sign-in" > Login </router-link> |
-    <button @click="handleSignOut" v-if="isLoggedIn" >Sign Out</button>
+    <router-link data-test="signin btn" to="/sign-in" > Login </router-link> |
+    <button data-test="signout btn" @click="handleSignOut" v-if="isLoggedIn" >Sign Out</button>
   </nav>
   <router-view />
 </template>
