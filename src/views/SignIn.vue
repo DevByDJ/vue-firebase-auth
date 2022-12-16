@@ -1,9 +1,9 @@
 <template>
     <h1 data-test="Register title">Sign into your Account</h1>
-    <p><input  type="text" placeholder="Email" v-model="email" /></p>
-    <p><input  type="password" placeholder="Password" v-model="password" /></p>
+    <p><input data-test="email input"  type="text" placeholder="Email" v-model="email" /></p>
+    <p><input data-test="password input"  type="password" placeholder="Password" v-model="password" /></p>
     <p v-if="errMsg">{{ errMsg }}</p>
-    <p><button  @click="register">Submit</button></p>
+    <p><button data-test="submit btn"  @click="register">Submit</button></p>
     <p><button  @click="signInWithGoogle">Sign In With Google</button></p>
 </template>
 
