@@ -19,6 +19,6 @@ jobs:
       - name: npm install
         run: npm ci
       - name: run server
-        run: npm run dev
+        run: npm run serve
       - name: tests
         run: npm run test:unit
