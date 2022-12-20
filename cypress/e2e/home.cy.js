@@ -1,7 +1,7 @@
 describe('Test Application', () => {
 
   beforeEach('',  () => {
-    cy.visit('http://localhost:8081/')
+    cy.visit('http://localhost:8080/')
     cy.wait(1500)
   })
 
