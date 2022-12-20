@@ -11,6 +11,7 @@ jobs:
       - name: Cypress run with env
         with:
           start: npm run serve
+          wait-on: 'http://localhost:4040'
         uses: cypress-io/github-action@v5
         env:
           CYPRESS_host: api.dev.local
