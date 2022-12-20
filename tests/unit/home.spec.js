@@ -16,10 +16,4 @@ describe('Home.vue', () => {
     expect(title.text()).toContain("HOME")
     
   })
-  it('should be routed to the register page when register button  is clicked', ()  => {
-    
-
-
-
-  })
 })

@@ -1,9 +1,9 @@
 <template>
     <h1 data-test="Register title">Create an Account</h1>
-    <p><input  type="text" placeholder="Email" v-model="email" /></p>
-    <p><input  type="password" placeholder="Password" v-model="password" /></p>
-    <p><button  @click="register">Submit</button></p>
-    <p><button  @click="signInWithGoogle">Sign In With Google</button></p>
+    <p><input data-test="Email input"  type="text" placeholder="Email" v-model="email" /></p>
+    <p><input data-test="Password input" type="password" placeholder="Password" v-model="password" /></p>
+    <p><button data-test="Submit button" @click="register()">Submit</button></p>
+    <p><button data-test="Oauth button" @click="signInWithGoogle">Sign In With Google</button></p>
 </template>
 
 <script setup>
