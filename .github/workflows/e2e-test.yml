@@ -10,7 +10,7 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run with env
         with:
-          start: npm start
+          start: npm run serve
         uses: cypress-io/github-action@v5
         env:
           CYPRESS_host: api.dev.local
